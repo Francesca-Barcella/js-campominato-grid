@@ -1,7 +1,4 @@
-
-alert('ciao, funziono!')
-
-/******************************************************************* 
+/****************************************************************** 
 TRACCIA
 L'utente clicca su un bottone che genererà una griglia di gioco quadrata. Ogni cella ha un numero progressivo, da 1 a 100.
 Ci saranno quindi 10 caselle per ognuna delle 10 righe.
@@ -23,22 +20,23 @@ console.log(cell);
 let totalCells = 100;
 console.log(totalCells);
 
-let listCells = document.getElementsByClassName('cell');
+let listCells = document.querySelectorAll('cell');
 console.log(listCells);
 
 
-//aggiungo le 100 in console
+//aggiungo le 100 in pagina
 for (let i = 0; i < totalCells; i++) {
-    containerGrid += cell;
+    containerGrid.innerHTML += cell;
+
 }
 console.log(containerGrid);
 
-for (let i = 0; i < listCells.length; i++) {
+// generare una lista di numeri PROGRESSIVI da 1 a 100
 
-    let choiceCell = listCells[i];
-
-    choiceCell.addEventListener('click', function () {
-        choiceCell.classList.add('blue');
-    });
-
+for (let i = 1; i <= 100; i++) {
+    
+    console.log(i);
+    
 }
+
+// aggiungere a "cell" i numeri progressivi da 1 a 100
