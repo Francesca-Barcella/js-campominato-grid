@@ -1,3 +1,25 @@
-body{
-    background-color: lightpink;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem 0;
+}
+
+.cell{
+    width: calc(100% / 10);
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+}
+
+.genera{
+    padding: 0.5rem;
+    border-radius: 1rem;
 }
