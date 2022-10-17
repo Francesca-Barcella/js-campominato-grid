@@ -19,6 +19,10 @@
     border: 1px solid black;
 }
 
+.blue{
+    background-color: blue;
+}
+
 .genera{
     padding: 0.5rem;
     border-radius: 1rem;
