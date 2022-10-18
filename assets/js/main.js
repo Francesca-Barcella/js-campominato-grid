@@ -11,27 +11,50 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 
 // collego il container del dom a js
 // creo le variabili per aggiungere 100 celle con let/const e getElementsByClassName
-let containerGrid = document.querySelector('.container');
+const containerGrid = document.querySelector('.container');
 console.log(containerGrid);
 
+const buttonGenerate = document.querySelector('.button');
+console.log(buttonGenerate);
 
-
-/* let totalCells = 100;
-console.log(totalCells); */
+let totalCells = 100;
+console.log(totalCells);
 
 let listCells = document.querySelectorAll('cell');
 console.log(listCells);
 
+/* 
+PROMEMORIA PER FARE IL N° CELLE PER RIGA DINAMICO
+let numberRowCells = Math.sqrt(totalCells);
+console.log('n° celle per riga = ' + numberRowCells);
+*/
 
-//aggiungo le 100 in pagina
-for (let i = 0; i < 100; i++) {
-    const singleNumbers = [i];
-    console.log(singleNumbers);
+// attivo l'eventlistener al button genera griglia
 
-    let cell = `<div class="cell">${singleNumbers}</div>`;
-    console.log(cell);
+buttonGenerate.addEventListener('click', function () {
+    console.log('hai cliccato il pulsante genera campo minato');
+    
+    //ciclo for per aggiungere le 100 celle con i numeri ordinati da 1 a 100
+    for (let i = 1; i <= totalCells; i++) {
+        const singleNumbers = [i];
+        //console.log(singleNumbers);
+            
+        let cell = `<div class="cell">${singleNumbers}</div>`;
+        //console.log(cell);
+        
+        containerGrid.innerHTML += cell;
 
-    containerGrid.innerHTML += cell;
-}
-console.log(containerGrid);
+             
+        
+        cell.addEventListener('click', function () {
+            console.log('hai cliccato il pulsante genera campo minato');
+        })
+
+    }
+    //console.log(containerGrid);
+
+})
+
+
+
 
