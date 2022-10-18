@@ -44,12 +44,11 @@ buttonGenerate.addEventListener('click', function () {
         containerGrid.insertAdjacentElement('beforeend', cellMarkUp);
 
         cellMarkUp.addEventListener('click', function (){
-            console.log(cellMarkUp);
+            console.log('hai cliccato il numero ' +  cellMarkUp.innerText);
             cellMarkUp.style.backgroundColor = 'lightblue';
         })
-
+        
     }
-
 })
 
 
