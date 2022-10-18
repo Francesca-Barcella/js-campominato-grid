@@ -14,29 +14,24 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 let containerGrid = document.querySelector('.container');
 console.log(containerGrid);
 
-let cell = '<div class="cell"></div>';
-console.log(cell);
 
-let totalCells = 100;
-console.log(totalCells);
+
+/* let totalCells = 100;
+console.log(totalCells); */
 
 let listCells = document.querySelectorAll('cell');
 console.log(listCells);
 
 
 //aggiungo le 100 in pagina
-for (let i = 0; i < totalCells; i++) {
-    containerGrid.innerHTML += cell;
+for (let i = 0; i < 100; i++) {
+    const singleNumbers = [i];
+    console.log(singleNumbers);
 
+    let cell = `<div class="cell">${singleNumbers}</div>`;
+    console.log(cell);
+
+    containerGrid.innerHTML += cell;
 }
 console.log(containerGrid);
 
-// generare una lista di numeri PROGRESSIVI da 1 a 100
-
-for (let i = 1; i <= 100; i++) {
-    
-    console.log(i);
-    
-}
-
-// aggiungere a "cell" i numeri progressivi da 1 a 100
