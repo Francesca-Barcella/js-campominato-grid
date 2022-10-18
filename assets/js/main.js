@@ -12,22 +12,21 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 // collego il container del dom a js
 // creo le variabili per aggiungere 100 celle con let/const e getElementsByClassName
 const containerGrid = document.querySelector('.container');
-console.log(containerGrid);
+//console.log(containerGrid);
 
 const buttonGenerate = document.querySelector('.button');
-console.log(buttonGenerate);
+//console.log(buttonGenerate);
 
 let totalCells = 100;
-console.log(totalCells);
+//console.log(totalCells);
 
 let listCells = document.querySelectorAll('.cell');
-console.log(listCells);
+//console.log(listCells);
 
-/* 
-PROMEMORIA PER FARE IL N° CELLE PER RIGA DINAMICO
+/*CALCOLO DEL NUMERO CELLE PER RIGA CON LA RADICE QUADRATA*/
 let numberRowCells = Math.sqrt(totalCells);
-console.log('n° celle per riga = ' + numberRowCells);
-*/
+//console.log('n° celle per riga = ' + numberRowCells);
+
 
 // attivo l'eventlistener al button genera griglia
 
@@ -41,6 +40,7 @@ buttonGenerate.addEventListener('click', function () {
         //console.log(cellMarkUp);
         cellMarkUp.className = 'cell';
         cellMarkUp.innerText = i;
+        cellMarkUp.style.width = `calc(100% / ${numberRowCells})`;
         containerGrid.insertAdjacentElement('beforeend', cellMarkUp);
 
         cellMarkUp.addEventListener('click', function (){

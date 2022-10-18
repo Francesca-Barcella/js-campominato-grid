@@ -14,7 +14,7 @@
 }
 
 .cell{
-    width: calc(100% / 10); /* togliere in futuro quando lo faremo dinamico per i bonus*/
+    /* width: calc(100% / 10);  *//* togliere in futuro quando lo faremo dinamico per i bonus*/
     border: 1px solid black;
     display: flex;
     justify-content: center;
