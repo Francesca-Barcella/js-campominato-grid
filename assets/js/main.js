@@ -20,7 +20,7 @@ console.log(buttonGenerate);
 let totalCells = 100;
 console.log(totalCells);
 
-let listCells = document.querySelectorAll('cell');
+let listCells = document.querySelectorAll('.cell');
 console.log(listCells);
 
 /* 
@@ -33,27 +33,25 @@ console.log('n° celle per riga = ' + numberRowCells);
 
 buttonGenerate.addEventListener('click', function () {
     console.log('hai cliccato il pulsante genera campo minato');
-    
+
     //ciclo for per aggiungere le 100 celle con i numeri ordinati da 1 a 100
     for (let i = 1; i <= totalCells; i++) {
-        const singleNumbers = [i];
-        //console.log(singleNumbers);
-            
-        let cell = `<div class="cell">${singleNumbers}</div>`;
-        //console.log(cell);
-        
-        containerGrid.innerHTML += cell;
 
-             
-        
-        cell.addEventListener('click', function () {
-            console.log('hai cliccato il pulsante genera campo minato');
+        const cellMarkUp = document.createElement('div');
+        //console.log(cellMarkUp);
+        cellMarkUp.className = 'cell';
+        cellMarkUp.innerText = i;
+        containerGrid.insertAdjacentElement('beforeend', cellMarkUp);
+
+        cellMarkUp.addEventListener('click', function (){
+            console.log(cellMarkUp);
+            cellMarkUp.style.backgroundColor = 'lightblue';
         })
 
     }
-    //console.log(containerGrid);
 
 })
+
 
 
 
